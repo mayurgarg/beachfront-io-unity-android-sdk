@@ -1,4 +1,4 @@
-beachfront-io-unity-sdk
+Beachfront-io-unity-sdk
 =======================
 
-Beachfront-iO Unity Sdk
+Beachfront-iO Unity Android Sdk
