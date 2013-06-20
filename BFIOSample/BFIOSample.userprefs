@@ -1,10 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../AndroidUnity/Assets/Plugins/RevMob.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/Android/AndroidManifest.xml">
     <Files>
-      <File FileName="Assets/Plugins/UnityBFIO.cs" Line="50" Column="37" />
-      <File FileName="Assets/Demo.cs" Line="19" Column="24" />
-      <File FileName="../AndroidUnity/Assets/Plugins/RevMob.cs" Line="39" Column="3" />
+      <File FileName="Assets/Plugins/UnityBFIO.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/Android/AndroidManifest.xml" Line="6" Column="27" />
+      <File FileName="Assets/Demo.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

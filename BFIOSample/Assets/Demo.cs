@@ -9,7 +9,7 @@ public class Demo : MonoBehaviour, AdListener {
     private float centerX = Screen.width / 2;
 	UnityBFIO unityBFIO;
 	String appID = "e04fd6b0-4eb2-4dc8-b8d3-accfb7cf8043";
-	String adUnitID = "622834c9-3b52-4114-a531-a4bf494230ba";
+	String adUnitID = "e4471497-53ec-42f8-af58-cba7464d9e5a";
     // Use this for initialization
     void Start ()
     {   
