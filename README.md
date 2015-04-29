@@ -7,11 +7,18 @@ This document details the process of integrating the Beachfront AD SDK with your
 
 * BeachFront IO app id & Ad Unit id - [Get it from here](http://beachfront.io/join)
 * BeachFront SDK Jar - [Get it from here](https://github.com/beachfront/beachfront-io-unity-android-sdk/tree/master/SDK)
-* Android 1.5 and above
+* Android 2.1 and above
 
 ## Installation
 1. Access the beachfront.io Console and register your application to get your App ID & Ad unit Id;
 2. Download the Beachfront Unity SDK & import the Beachfront Unity SDK to your Unity project as a custom package.
+3. Add the Google play service library project to Assets > Plugins > Android.
+4. After you've added the Google Play services library as a dependency for your app project, open your app's manifest file and add the following tag as a child of the <application> element:
+```
+	<meta-data android:name="com.google.android.gms.version"
+		android:value="@integer/google_play_services_version" />
+```
+
 3. Add the BF activity in the application node of AndroidManifesh.xml:
 
 ```
@@ -74,7 +81,7 @@ using System.Collections;
 public class Demo : MonoBehaviour, AdListener { private GUIStyle labelStyle = new GUIStyle();
 private float centerX = Screen.width / 2;
 UnityBFIO unityBFIO;
-String appID = “e04fd6b0-4eb2-4dc8-b8d3-accfb7cf8043”; String adUnitID = “622834c9-3b52-4114-a531-a4bf494230ba”;
+String appID = “57d0480b-3784-4741-e240-fb9d67e4b131”; String adUnitID = “43577eec-b857-4050-c716-7759958d1642”;
 
 // Use this for initialization
 void Start () {
@@ -82,16 +89,14 @@ labelStyle.fontSize = 24;
 labelStyle.normal.textColor = Color.black; labelStyle.alignment = TextAnchor.MiddleCenter; unityBFIO = UnityBFIO.getInstance (appID,adUnitID, this);
 }
 
-void OnGUI () {
-GUI.Label(new Rect(centerX -200, 20, 400, 35), “BFIOSDK Demo”, labelStyle);
-if (GUI.Button(new Rect(centerX - 75, 80, 150, 35), “Request Ad”))
+void OnGUI ()
 {
-unityBFIO.requestAD(appID,adUnitID);
+  GUI.Label(new Rect(centerX - 200, 20, 400, 35), "BFIOSDK Demo", labelStyle);
+if (GUI.Button(new Rect(centerX - 75, 80, 180, 75), "Request Ad"))
+  {	
+            unityBFIO.requestAD(appID,adUnitID);
+  }
 }
-if (GUI.Button(new Rect(centerX - 75, 180, 150, 35), “Show Ad”))
-{
-unityBFIO.showAD( );
-} }
 
 public void onInterstitialFailed(string args){ }
 public void onInterstitialStarted(string args){ }
@@ -103,8 +108,6 @@ public void onReceiveInterstitial(string args){ unityBFIO.showAD( );
 }
 
 ```
-
-Instruction PDF can be found at - https://github.com/beachfront/beachfront-io-unity-android-sdk/raw/master/bfio-Unity-android-sdk.pdf
 
 Have a bug? Please [create an issue on GitHub](https://github.com/beachfront/beachfront-io-unity-android-sdk/issues)!
 
