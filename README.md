@@ -19,7 +19,7 @@ This document details the process of integrating the Beachfront AD SDK with your
 		android:value="@integer/google_play_services_version" />
 ```
 
-3. Add the BF activity in the application node of AndroidManifesh.xml:
+5. Add the BF activity in the application node of AndroidManifesh.xml:
 
 ```
 	<activity
